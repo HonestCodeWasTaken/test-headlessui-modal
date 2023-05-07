@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
+import CreateBusinessModal from "components/CreateBusinessModal";
 import { signIn, signOut } from "next-auth/react";
 
 import { api, type RouterOutputs } from "~/utils/api";
@@ -100,7 +101,7 @@ const Home: NextPage = () => {
             Create <span className="text-pink-400">T3</span> Turbo
           </h1>
           <AuthShowcase />
-
+          <CreateBusinessModal />
           <CreatePostForm />
 
           {postQuery.data ? (
